@@ -18,5 +18,5 @@ COPY --from=builder /extracted/app/dependencies/ ./
 COPY --from=builder /extracted/app/spring-boot-loader/ ./
 COPY --from=builder /extracted/app/snapshot-dependencies/ ./
 COPY --from=builder /extracted/app/application/ ./
-EXPOSE 8300
+EXPOSE 8761
 ENTRYPOINT ["java", "-jar", "app.jar"]
